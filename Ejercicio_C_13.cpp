@@ -22,12 +22,23 @@ std::cout<<std::endl;
   
 }
 
-void multiplicacion(float a){
+void multiplicacion(int N,float **m, float **n){
+float **rta=new float *[N];
+for (int i =0; i <N; ++i){rta[i] = new float[N];} 
+float z=0;
+for(int j=0;j<N;j++){
+for(int ja=0; ja<N; ja++){
+for(int ii=0; ii<N; ii++){
+  //
 
+   float z=z+m[j][ii]*n[ii][ja];}
 
-
+rta[j][ja]=z;
+std::cout<<" "<<rta[j][ja]<<" ";
 }
-
+std::cout<<std::endl;  
+}
+}
 int main(){
 	//int argc, char **argv
   //int N=atoi(argv[1]);
@@ -38,6 +49,8 @@ float **Matriz=new float *[N];
 for (int i =0; i <N; ++i){Matriz[i] = new float[N];} // creo la matriz cuadrada
 
 rellenoNilpotent(N,Matriz);
+
+delete [] Matriz;
 
 return 0;
 }
