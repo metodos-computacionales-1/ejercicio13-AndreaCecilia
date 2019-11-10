@@ -49,6 +49,8 @@ float **Matriz=new float *[N];
 for (int i =0; i <N; ++i){Matriz[i] = new float[N];} // creo la matriz cuadrada
 
 rellenoNilpotent(N,Matriz);
+std::cout<<"Se comprueba que la matriz sea  de Nilpotent multiplicandola por ella misma, ya que resulta una matriz de zeros: "<<std::endl;
+multiplicacion(N, Matriz,Matriz);
 
 delete [] Matriz;
 
