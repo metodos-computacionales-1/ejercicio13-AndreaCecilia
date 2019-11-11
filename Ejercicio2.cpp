@@ -1,7 +1,7 @@
 ﻿
 #include <iostream>
 
-int addition(int &a, int b)
+int addition(const int &a, int b)
 {
     int r;
     r=a+b;
