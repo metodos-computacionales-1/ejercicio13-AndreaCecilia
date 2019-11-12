@@ -26,7 +26,7 @@ void rellenoCauchy(int N,float **m){
 for(int ii=0;ii<N; ii++){
 for(int ij=0;ij<N; ij++){
   
-    
+m[ii][ij]=1/(ij+ii);   
 std::cout<<" "<<m[ii][ij]<<" ";
 }
 std::cout<<std::endl;  
